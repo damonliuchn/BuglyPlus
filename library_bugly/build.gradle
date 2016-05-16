@@ -19,5 +19,5 @@ android {
 }
 
 dependencies {
-    compile 'com.tencent.bugly:crashreport_upgrade:1.0.1'
+    compile 'com.tencent.bugly:crashreport_upgrade:1.0.2'
 }

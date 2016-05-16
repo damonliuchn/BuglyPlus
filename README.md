@@ -14,7 +14,7 @@ allprojects {
 	}
 
 	dependencies {
-	        compile 'com.github.MasonLiuChn:BuglyPlus:1.0.1.0'
+	        compile 'com.github.MasonLiuChn:BuglyPlus:1.0.2.0'
 	}
 ```
 

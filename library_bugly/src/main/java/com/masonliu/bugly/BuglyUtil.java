@@ -28,6 +28,7 @@ public class BuglyUtil {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
+                // isShowToast , isHideDialog
                 Beta.checkUpgrade(false, false);
             }
         }, 4000);
