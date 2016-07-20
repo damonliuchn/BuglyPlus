@@ -19,18 +19,21 @@ public class BuglyUtil {
             strategy.setAppChannel(channel);
         }
         Beta.autoCheckUpgrade = false;
-        //默认延迟两秒
+        //默认延迟两秒启动buglySDK
         Beta.initDelay = 2000;
-        Bugly.init(context.getApplicationContext(), buglyAppid, false, strategy);
+        Bugly.init(context.getApplicationContext(), buglyAppid, false, strategy);//第三个参数指是否打印日志
     }
 
     public static void checkUpgrade() {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                // isShowToast , isHideDialog
+                /**
+                 * @param isManual 用户手动点击检查,非用户点击操作请传false
+                 * @param isSilence 是否显示弹窗等交互,[true:没有弹窗和toast] [false:有弹窗或toast]
+                 */
                 Beta.checkUpgrade(false, false);
             }
-        }, 4000);
+        }, 4000);//延迟4秒检测更新,直接检查更新是不行的.
     }
 }
