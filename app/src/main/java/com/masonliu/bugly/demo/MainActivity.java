@@ -11,6 +11,6 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        BuglyUtil.checkUpgrade();
+        BuglyUtil.checkUpgrade(false);
     }
 }

@@ -24,16 +24,20 @@ public class BuglyUtil {
         Bugly.init(context.getApplicationContext(), buglyAppid, false, strategy);//第三个参数指是否打印日志
     }
 
-    public static void checkUpgrade() {
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                /**
-                 * @param isManual 用户手动点击检查,非用户点击操作请传false
-                 * @param isSilence 是否显示弹窗等交互,[true:没有弹窗和toast] [false:有弹窗或toast]
-                 */
-                Beta.checkUpgrade(false, false);
-            }
-        }, 4000);//延迟4秒检测更新,直接检查更新是不行的.
+    public static void checkUpgrade(final boolean isManual) {
+        if (isManual) {
+            /**
+             * @param isManual 用户手动点击检查,非用户点击操作请传false
+             * @param isSilence 是否显示弹窗等交互,[true:没有弹窗和toast] [false:有弹窗或toast]
+             */
+            Beta.checkUpgrade(isManual, false);
+        } else {
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    Beta.checkUpgrade(isManual, false);
+                }
+            }, 4000);//延迟4秒检测更新,直接检查更新是不行的.
+        }
     }
 }
