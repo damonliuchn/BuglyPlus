@@ -14,7 +14,7 @@ allprojects {
 	}
 
 	dependencies {
-	        compile 'com.github.MasonLiuChn:BuglyPlus:1.1.2.0'
+	        compile 'com.github.MasonLiuChn:BuglyPlus:1.1.6.0'
 	}
 ```
 
@@ -23,7 +23,7 @@ BuglyUtil.init(this, appId, channel);
 ```
 
 ```java
-BuglyUtil.checkUpgrade();
+BuglyUtil.checkUpgrade(boolean isManual);
 ```
 
 #Contact me:
