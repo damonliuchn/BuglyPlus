@@ -3,7 +3,7 @@
 Bugly Android SDK 封装: 包含App升级功能，Maven引用即可，不用关心AndroidManifest里的权限、Activity和Proguard混淆。
 
 
-#Usage:
+# Usage:
 
 ```goovy
 allprojects {
@@ -14,7 +14,7 @@ allprojects {
 	}
 
 	dependencies {
-	        compile 'com.github.MasonLiuChn:BuglyPlus:1.1.7.0'
+	        compile 'com.github.MasonLiuChn:BuglyPlus:1.3.3.0'
 	}
 ```
 
@@ -26,14 +26,14 @@ BuglyUtil.init(this, appId, channel);
 BuglyUtil.checkUpgrade(boolean isManual);
 ```
 
-#Contact me:
+# Contact me:
 
 Blog:http://blog.csdn.net/masonblog
 
 Email:MasonLiuChn@gmail.com
 
-#License:
-    Copyright 2016 MasonLiu, Inc.
+# License:
+    Copyright 2017 MasonLiu, Inc.
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
