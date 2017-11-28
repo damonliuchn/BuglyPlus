@@ -23,7 +23,7 @@ public class BuglyUtil {
         }
         Beta.autoInit = true;
         Beta.autoCheckUpgrade = false;
-        Beta.autoDownloadOnWifi = true;
+        Beta.autoDownloadOnWifi = false;
         //默认延迟两秒启动buglySDK
         Beta.initDelay = 2000;
         Bugly.init(context.getApplicationContext(), buglyAppid, false, strategy);//第三个参数指是否打印日志
@@ -44,7 +44,7 @@ public class BuglyUtil {
             new Handler().postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    Beta.checkUpgrade(isManual, false);
+                    Beta.checkUpgrade(isManual,false );
                 }
             }, 4000);//延迟4秒检测更新,直接检查更新是不行的.
         }
